@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 const {
   getEndpoints,
@@ -21,7 +22,10 @@ const {
   handleServerErrors,
 } = require("./errors/errors");
 
+// MIDDLEWARE
+
 app.use(express.json());
+app.use(cors());
 
 // GET REQUESTS
 
