@@ -1,0 +1,104 @@
+{
+  "GET /api": {
+    "description": "serves up a json representation of all the available endpoints of the API"
+  },
+  "GET /api/users": {
+    "description": "returns an array of all usernames in the database",
+    "exampleResponse": [
+      { "username": "alicej" },
+      { "username": "bobsmith" },
+      { "username": "charlieb" },
+      { "username": "dprince" },
+      { "username": "ethanh" }
+    ]
+  },
+  "GET /api/users/:username/:password": {
+    "description": "returns an object containing user info matching the username and password",
+    "exampleResponse": {
+      "name": "Alice Johnson",
+      "username": "alicej",
+      "email": "alice.johnson@example.com",
+      "password": "P@ssw0rd123",
+      "user_id": 1,
+      "collections": []
+    }
+  },
+  "GET /api/collections/:user_id": {
+    "description": "returns an array of all collection objects associated with given user_id",
+    "exampleResponse": {
+      "collection_id": 1,
+      "user_id": 1,
+      "collection_name": "Paintings",
+      "collection": ["O123456", "O234567", "O345678", "O456789", "O567890"]
+    }
+  },
+  "GET /api/collections/:user_id/:collection_id": {
+    "description": "returns a collection object matching the user_id and collection_id given",
+    "exampleResponse": {
+      "collection_id": 2,
+      "collection_name": "Sculptures",
+      "collection": ["O223344", "O334455", "O445566", "O556677", "O667788"]
+    }
+  },
+  "POST /api/users": {
+    "description": "posts a new user to users database and returns the new user",
+    "accepts": {
+      "name": "Emily Spiers",
+      "username": "emilys123",
+      "email": "test@email.com",
+      "password": "testpassword"
+    },
+    "exampleResponse": {
+      "user_id": 5,
+      "name": "Emily Spiers",
+      "username": "emilys123",
+      "email": "test@email.com",
+      "password": "testpassword"
+    }
+  },
+  "POST /api/collections/:user_id/:password": {
+    "description": "posts a new collection (empty array) linked to a user_id when given correct id/password combination, and a collection name, returns this collection",
+    "accepts": { "collection_name": "Test" },
+    "exampleResponse": {
+      "user_id": 1,
+      "collection_id": 6,
+      "collection_name": "Test",
+      "collection": []
+    }
+  },
+  "DELETE /api/user/:username/:password": {
+    "description": "deletes user and returns empty object",
+    "exampleResponse": {}
+  },
+  "DELETE /api/:user_id/:password/:collection_id": {
+    "description": "deletes collection and returns an empty object",
+    "exampleResponse": {}
+  },
+  "PATCH /api/collections/:user_id/:password/:collection_id": {
+    "description": "adds a new object_id to a collection array and returns the collection",
+    "accepts": { "objectId": "O222333" },
+    "exampleResponse": {
+      "collection_id": 2,
+      "user_id": 1,
+      "collection_name": "Sculptures",
+      "collection": [
+        "O223344",
+        "O334455",
+        "O445566",
+        "O556677",
+        "O667788",
+        "O222333"
+      ]
+    }
+  },
+  "PATCH /api/collections/:user_id/:password/:collection_id/remove": {
+    "description": "removes object from collecion array and returns updated collection",
+    "accepts": { "objectId": "O123456" },
+    "exampleResponse": {
+      "collection_id": 1,
+      "user_id": 1,
+      "collection_name": "Paintings",
+      "collection": ["O234567", "O345678", "O456789", "O567890"]
+    }
+  }
+}
