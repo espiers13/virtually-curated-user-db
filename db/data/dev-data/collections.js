@@ -7,7 +7,7 @@ module.exports = [
   {
     user_id: 2,
     collection_name: "Sculptures",
-    collection: [129884, 129885, 129886, 129887, 129888],
+    collection: [11143, 185184, 21023],
   },
   {
     user_id: 3,
@@ -17,7 +17,7 @@ module.exports = [
   {
     user_id: 4,
     collection_name: "Photographs",
-    collection: [129889, 129890, 129891, 129892, 129893],
+    collection: [13617, 203587, 4541, 4534],
   },
   {
     user_id: 5,
@@ -30,7 +30,7 @@ module.exports = [
     collection: [22938, 118760, 45377, 5294],
   },
   {
-    user_id: 1,
+    user_id: 6,
     collection_name: "Furniture",
     collection: [
       "O124266",
@@ -43,9 +43,9 @@ module.exports = [
     ],
   },
   {
-    user_id: 2,
-    collection_name: "Prints",
-    collection: [129899, 129900, 129901, 129902, 129903],
+    user_id: 6,
+    collection_name: "Paintings",
+    collection: [72889, 8983, 77615, 120542],
   },
   {
     user_id: 3,
@@ -55,6 +55,6 @@ module.exports = [
   {
     user_id: 4,
     collection_name: "Manuscripts",
-    collection: [129904, 129905, 129906, 129907, 129908],
+    collection: [10927, 14691, 14694],
   },
 ];

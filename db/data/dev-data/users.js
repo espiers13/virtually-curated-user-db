@@ -29,4 +29,10 @@ module.exports = [
     email: "alex.rivers@devmail.com",
     password: "Pipeline!Deploy",
   },
+  {
+    name: "Emily Spiers",
+    username: "emily",
+    email: "emily@test.com",
+    password: "123",
+  },
 ];

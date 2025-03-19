@@ -21,7 +21,7 @@ const seed = ({ usersData, collectionsData }) => {
       return db.query(`
       CREATE TABLE collections (
         collection_id SERIAL PRIMARY KEY,
-        collection_name VARCHAR NOT NULL,
+        collection_name VARCHAR NOT NULL UNIQUE,
         user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
         collection TEXT[] DEFAULT array[]::int[]
       );`);
