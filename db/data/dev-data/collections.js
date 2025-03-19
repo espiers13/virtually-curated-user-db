@@ -44,7 +44,7 @@ module.exports = [
   },
   {
     user_id: 6,
-    collection_name: "Paintings",
+    collection_name: "Art",
     collection: [72889, 8983, 77615, 120542],
   },
   {
