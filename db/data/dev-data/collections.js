@@ -2,7 +2,7 @@ module.exports = [
   {
     user_id: 1,
     collection_name: "Paintings",
-    collection: ["O138099", "O102232", "O124254", "O73264", "O124255"],
+    collection: ["O138099", "O102232", "O124254", "O124255"],
   },
   {
     user_id: 2,
@@ -27,12 +27,20 @@ module.exports = [
   {
     user_id: 1,
     collection_name: "Drawings",
-    collection: [129894, 129895, 129896, 129897, 129898],
+    collection: [22938, 118760, 45377, 5294],
   },
   {
     user_id: 1,
     collection_name: "Furniture",
-    collection: ["O124266", "O124267", "O124268", "O124269", "O124270"],
+    collection: [
+      "O124266",
+      "O124267",
+      "O124268",
+      "O124269",
+      "O124270",
+      203128,
+      187061,
+    ],
   },
   {
     user_id: 2,
